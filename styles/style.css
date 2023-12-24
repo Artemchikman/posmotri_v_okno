@@ -119,6 +119,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
+  padding-bottom: 3px;/*Добавил отступ*/
   gap: 15px;
 }
 
@@ -140,7 +141,7 @@ ol {
   align-self: flex-start;
   width: 100%;
   height: 100%;
-  gap: 26px;
+  gap: 23px;
 }
 
 .result__video-container {
@@ -152,6 +153,7 @@ ol {
 
 .content__list {
   overflow: auto;
+  overflow-x: hidden;
   width: 399px;
   height: 294px;
   position: relative; /*Позиционирование прелоадеров*/
@@ -215,7 +217,7 @@ ol {
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
-  width: 100%;
+  width: 96%;
   height: 103px;
 }
 
@@ -242,7 +244,7 @@ ol {
 .content__card-link {
   display: block;
   text-decoration: none;
-  margin: 2px;
+  /* Убрал  margin: 2px; */ /*Но, для коректоного отображения focus-visible, нужен margin:2px*/
 }
 
 .content__card-link_current {
@@ -253,6 +255,7 @@ ol {
 .content__card-link:active{
   text-decoration: none;
 }
+
 .content__video-card-title {
   width: 200px;
   color: #fff;
@@ -318,9 +321,8 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  width: 399px;
+  width: 100%; /*Поправил*/
   min-height: 34px; /*Поправил*/
-  margin: 3px;
 }
 
 .search-form__submit-button {
